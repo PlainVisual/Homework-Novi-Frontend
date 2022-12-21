@@ -1,1 +1,41 @@
-/*Schrijf hier jouw CSS*/
+/* -- Flex-column on body -- */
+
+.flex-body-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-header, .flex-footer {
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.flex-main {
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+/* -- Flex-row on main -- */
+
+.flex-inner-row {
+  display: flex;
+}
+
+.flex-row-nav, .flex-row-aside {
+  flex-basis: 385px;
+  flex-grow:0;
+  flex-shrink:0;
+}
+
+.flex-row-article {
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+/* -- Use a pseudo-element to switcht article to center */
+
+.flex-inner-row :nth-child(2) {
+  order: -1;
+}
