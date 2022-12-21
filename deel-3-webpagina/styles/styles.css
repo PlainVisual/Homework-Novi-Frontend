@@ -1,1 +1,186 @@
-/*Schrijf hier jouw css*/
+/* -- Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,900;1,100;1,200;1,300;1,700;1,900&display=swap');
+
+/* -- Global styles - Variables -- */
+:root {
+
+--ff-fontfamily: 'Poppins', sans-serif;
+--ff-fontweight-thin: 100;
+--ff-fontweight-exLight: 200;
+--ff-fontweight-light: 300;
+--ff-fontweight-medium: 500;
+--ff-fontweight-bold: 700;
+--ff-fontweight-black: 900;
+
+--ff-fontsize-h1: calc(1rem + 2vw);
+--ff-fontsize-h2: 2rem;
+--ff-fontsize-h3: 0.95rem;
+--ff-fontsize-p: 0.75rem;
+
+--primary-clr:hsl(245, 100%, 8%);
+--secondary-clr:hsl(359, 40%, 59%);
+--accent-clr: var(--background-clr);
+--background-clr:hsl(62, 52%, 90%);
+
+--layout-wrapper-size: 100%;
+--layout-wrapper-padding-lr: 0px 40px;
+
+--animation-transition:all 0.35s ease-in-out;
+}
+
+/* -- CSS RESET -- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+margin: 0px;
+padding: 0px;
+line-height: calc(1em + 0.5rem);
+}
+
+body {
+font-family: var(--ff-fontfamily);
+font-weight: var(--ff-fontweight-light);
+color: var(--primary-clr);
+background-color: var(--background-clr);
+-webkit-font-smoothing: antialiased;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    
+  }
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+
+/* -- TYPOGRAPHY LINKS -- */
+
+a {
+  color: var(--accent-clr);
+  font-weight: var(--ff-fontweight-medium);
+  transition: var(--animation-transition);
+  text-decoration: none;
+}
+
+/* -- BODY FLEX-column -- */
+
+.flex-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+/* -- LAYOUT STYLING -- */
+
+
+.wrapper-content {
+    max-width: var(--layout-wrapper-size);
+    padding: var(--layout-wrapper-padding-lr); 
+}
+
+/* -- HEADER NAV FLEX -- */
+
+header {
+  display: flex;
+  flex-basis: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-clr);
+  color: #FFFF;
+  padding: var(--layout-wrapper-padding-lr);
+}
+
+header ul {
+  display: flex;
+  column-gap:80px;
+}
+
+header ul > li {
+  list-style: none;
+}
+
+header ul > li > a:hover {
+  color: var(--secondary-clr);
+}
+
+/* -- MAIN FLEX-CONTENT-- */
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.info-usp-cards {
+  flex-basis: 350px;
+}
+/* -- INFO-BOX FLEX -- */
+
+.info-box-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+} 
+
+/* -- INFO-BOX TYPO -- */
+
+.info-box h1 {
+  flex-basis: 100%;
+  flex-grow: 0;
+  font-size: var(--ff-fontsize-h1);
+} 
+
+.info-box h3 {
+  flex-grow: 0;
+  font-size: var(--ff-fontsize-h3);
+}
+
+/* -- INNER-ROW-FLEX -- */
+
+.inner-row-usp {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+/* -- USP-CARD FLEX -- */
+
+.usp-card-flex {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* -- USP-CARD STYLING -- */
+
+.usp-card {
+  flex-basis: 280px;
+  padding: 1em 1em;
+  border-radius: 8px;
+  background-color: var(--secondary-clr);
+}
+
+/* -- USP-CARD TYPO -- */
+
+.usp-card p {
+  font-size: var(--ff-fontsize-p);
+  font-weight: var(--ff-fontweight-medium);
+  text-align: center;
+}
