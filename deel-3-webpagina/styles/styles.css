@@ -85,7 +85,7 @@ a {
 
 
 .wrapper-content {
-    max-width: var(--layout-wrapper-size);
+    width: var(--layout-wrapper-size);
     padding: var(--layout-wrapper-padding-lr); 
 }
 
@@ -101,9 +101,16 @@ header {
   padding: var(--layout-wrapper-padding-lr);
 }
 
+header nav {
+  display: flex;
+  padding-left: 20px;
+}
+
 header ul {
   display: flex;
-  column-gap:80px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  column-gap:50px;
 }
 
 header ul > li {
