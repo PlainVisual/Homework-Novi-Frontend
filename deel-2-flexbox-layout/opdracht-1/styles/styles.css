@@ -1,1 +1,36 @@
-/*Schrijf hier jouw CSS*/
+/* -- FLEXBOX on body - flex-direction - column -- */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flex-column-header, .flex-column-footer {
+  flex-basis: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.flex-column-main {
+  flex-basis: auto;
+  flex-grow:1;
+}
+
+.flex-row-main {
+  display: flex;
+}
+
+.flex-row-article {
+  flex-grow: 1;
+}
+
+.flex-row-nav, .flex-row-aside {
+  flex-basis: 300px;
+  flex-shrink: 0;
+}
+
+
+.flex-row-main :nth-child(2) {
+  order: 1;
+}
